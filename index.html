@@ -1,0 +1,53 @@
+""" 
+Calcula ajuste de dinheiro, se tempo < 1 mantém , se tempo < 10 faz uma coisa, se tempo >= 10 faz outra:
+"""
+dinheiro = 1000.50
+tempo = 20
+
+if tempo<1:
+  print("Seu dinheiro continua:", dinheiro)
+else:
+  if tempo<10:
+    dinheiro = dinheiro * 1.1
+  else:
+    dinheiro = dinheiro * 1.2
+  print("Seu dinheiro apos o ajuste:", dinheiro)
+
+""
+Faremos um comando que funciona como calculadora.
+""
+
+valores = [5,9]     #Poderiamos pedir que o usuario informasse com:
+#valores=input("Digite dois valores: ").split()
+x = int(valores[0])
+y = int(valores[1])
+op = "+"            #Poderiamos pedir que o usuario informasse
+
+if op=="+":
+  resultado = x+y
+elif op=="-":
+  resultado = x-y
+elif op=="*":
+  resultado = x*y
+elif op=="/":
+  resultado = x/y
+elif op=="**":
+  resultado = x**y
+print(x,op,y,"=",resultado)
+
+def fat(n):
+  if n==0:
+    return 1
+  else:
+    return n*fat(n-1)     #Aqui esta a chamada recursiva
+
+
+#Utilizando o range()
+soma = 0
+for i in range(3):
+  soma = soma + vetor[i]
+
+#Utilizando o len()
+soma = 0
+for i in range(len(itens)):
+  soma = soma + itens[i]
